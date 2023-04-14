@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as var;
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url(../../.././images/hero-image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .hero-inner-content {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    color: var.$primary-color;
+    font-weight: 500;
+    font-size: 36px;
+    background-color: var.$secondary-color;
+  }
+
+  .hero-tagline {
+    color: var.$primary-color;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: var.$secondary-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    min-width: 1000px;
+  }
+}
