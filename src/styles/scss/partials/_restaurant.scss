@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as mix;
 
 .restaurant-content {
+  margin-block: 2.5rem;
   padding: 32px;
 
   h2 {
@@ -102,7 +103,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  main {
+  .container {
     max-width: 1200px;
   }
 }

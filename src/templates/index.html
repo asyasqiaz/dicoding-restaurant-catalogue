@@ -6,8 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Discover local restaurant in Indonesia to enjoy the most amazing cuisine with rating information">
+  <meta name="theme-color" content="#765567" />
+
   <title>Dreamy Meal</title>
+
+  <link rel="manifest" href="./app.webmanifest">
   <link rel="stylesheet" href="../styles/scss/main.scss" />
+  <link rel="apple-touch-icon" href="/images/app-icon/Icon-192.png">
+  <link rel="icon" href="./images/dreamy-meal-icon.svg">
+  <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
 </head>
 
 <body>
@@ -23,54 +30,19 @@
             <a href="/" class="active">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#">Favorite</a>
+            <a href="#/favorite">Favorite</a>
           </li>
           <li class="nav-item">
-            <a href="https://www.linkedin.com/in/annisasyasqiazain/">About Us</a>
+            <a href="https://www.linkedin.com/in/annisasyasqiazain/" target="_blank">About Us</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner-content">
-      <h1 class="hero-title">Good Food, Good Mood</h1>
-      <p class="hero-tagline">Find hundreds of flavors under one roof</p>
-    </div>
-  </section>
+  <main id="maincontent" tabindex=0></main>
 
-  <main id="maincontent">
-    <section class="why-us">
-      <div class="content-title">
-        <h2>Why <span class="text-underline">Us?</span></h2>
-      </div>
-      <div class="inner-content">
-        <div class="image">
-          <img src="../images/meal-icon.svg" alt="Meal Icon">
-        </div>
-        <div class="inner-description">
-          <p class="why-us-description">Dreamy meal has listings for everything, <br>including the most amazing cuisine
-            served<br>
-            at the coziest hidden gems
-            and swankiest
-            restaurants.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="restaurant-content">
-      <div class="content-title">
-        <h2>Explore Restaurant That Appeal To <span class="text-underline">You</span></h2>
-      </div>
-      <div id="restaurant-list" class="restaurant-list">
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 — Dreamy Meal</p>
-  </footer>
+  <footer-section></footer-section>
 
 </body>
 
