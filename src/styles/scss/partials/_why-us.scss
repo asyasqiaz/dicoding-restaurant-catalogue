@@ -6,12 +6,13 @@
   text-align: center;
 
   .inner-content .image {
-    max-width: 500px;
     margin-inline: auto;
-  }
+    max-width: 500px;
 
-  img {
-    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   h2 {

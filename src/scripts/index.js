@@ -1,3 +1,5 @@
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'regenerator-runtime';
 import '../styles/scss/main.scss';
 import './components/hero-section';
@@ -15,7 +17,7 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   app.renderPage();
   swRegister();
 });

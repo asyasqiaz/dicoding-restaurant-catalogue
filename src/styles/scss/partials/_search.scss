@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as var;
+
+.search-container {
+  margin-block: 2.5rem;
+  margin-inline: auto;
+  max-width: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  position: sticky;
+  top: 10px;
+  background-color: var.$secondary-color;
+
+  > input {
+    font-family: "Poppins", sans-serif;
+    width: 75%;
+    padding: 16px;
+    border: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: var.$secondary-color;
+    color: var.$primary-color;
+
+    &:focus {
+      color: var.$primary-color;
+      outline: 0;
+
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        color: var.$primary-color;
+      }
+    }
+
+    &::placeholder {
+      color: var.$primary-color;
+      font-weight: normal;
+    }
+  }
+
+  > button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    width: 23%;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 14px;
+    background-color: var.$primary-color;
+    color: var.$secondary-color;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 10px;
+
+    &:hover {
+      border: 2px solid var.$primary-color;
+      background-color: transparent;
+      color: var.$primary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search-container {
+    flex-direction: column;
+    position: static;
+
+    > input {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    > button {
+      width: 100%;
+    }
+  }
+}

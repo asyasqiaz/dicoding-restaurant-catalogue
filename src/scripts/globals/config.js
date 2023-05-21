@@ -1,7 +1,9 @@
 const CONFIG = {
   KEY: 'YOUR_API_KEY',
   BASE_URL: 'https://restaurant-api.dicoding.dev/',
-  BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/medium/',
+  BASE_IMAGE_LARGE_URL: 'https://restaurant-api.dicoding.dev/images/large/',
+  BASE_IMAGE_MEDIUM_URL: 'https://restaurant-api.dicoding.dev/images/medium/',
+  BASE_IMAGE_SMALL_URL: 'https://restaurant-api.dicoding.dev/images/small/',
   DEFAULT_LANGUAGE: 'en-us',
   CACHE_NAME: 'RestaurantCatalogue-V1',
   DATABASE_NAME: 'restaurant-catalogue-database',

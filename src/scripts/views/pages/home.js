@@ -1,5 +1,5 @@
 import RestaurantDbSource from '../../data/restaurantdb-source';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import { createSkeletonRestaurantTemplate, createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -12,7 +12,7 @@ const Home = {
       </div>
       <div class="inner-content">
         <div class="image">
-          <img src="../images/meal-icon.svg" alt="Meal Icon">
+          <img class="lazyload" data-src="../images/meal-icon.svg" alt="Meal Icon">
         </div>
         <div class="inner-description">
           <p class="why-us-description">Dreamy meal has listings for everything, <br>including the most amazing cuisine
@@ -29,6 +29,7 @@ const Home = {
         <h2>Explore Restaurant That Appeal To <span class="text-underline">You</span></h2>
       </div>
       <div id="restaurants" class="restaurant-list">
+        ${createSkeletonRestaurantTemplate(20)}
       </div>
     </section>
     </div>
@@ -38,6 +39,7 @@ const Home = {
   async afterRender() {
     const restaurants = await RestaurantDbSource.restaurantList();
     const restaurantContainer = document.querySelector('#restaurants');
+    restaurantContainer.innerHTML = '';
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
