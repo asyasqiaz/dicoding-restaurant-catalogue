@@ -2,24 +2,27 @@
 @use "../abstracts/mixins" as mix;
 @use "sass:map";
 
-*,
-*::before,
-*::after {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
+body,
+html {
   @include mix.full-size;
   font-family: var.$primary-fonts;
+  scroll-behavior: smooth;
 }
 
 main {
   width: 100%;
   margin-inline: auto;
-  margin-block: 2.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  min-height: 70vh;
 }
 
 .skip-link {
@@ -49,4 +52,21 @@ main {
     border-radius: 50%;
     height: 8px;
   }
+}
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: var.$primary-color;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

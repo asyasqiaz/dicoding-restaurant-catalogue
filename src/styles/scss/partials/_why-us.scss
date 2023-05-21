@@ -1,16 +1,18 @@
 @use "../abstracts/variables" as var;
 
 .why-us {
+  margin: 2.5rem auto;
   padding: 32px;
   text-align: center;
 
   .inner-content .image {
-    max-width: 500px;
     margin-inline: auto;
-  }
+    max-width: 500px;
 
-  img {
-    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   h2 {
